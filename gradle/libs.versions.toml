@@ -1,0 +1,28 @@
+[versions]
+keycloak = "24.0.3"
+hibernate-validator = "8.0.0.Final"
+json = "20231013"
+aws = "2.26.20"
+mockito = "5.5.0"
+junit = "5.9.3"
+
+[plugins]
+semver = { id = "net.thauvin.erik.gradle.semver", version = "1.0.4" }
+shadow-jar = { id = "com.github.johnrengelman.shadow", version = "8.1.1" }
+
+[libraries]
+keycloak-core = { group = "org.keycloak", name = "keycloak-core", version = { ref = "keycloak" } }
+keycloak-server-spi = { group = "org.keycloak", name = "keycloak-server-spi", version = { ref = "keycloak" } }
+keycloak-server-spi-private = { group = "org.keycloak", name = "keycloak-server-spi-private", version = { ref = "keycloak" } }
+keycloak-services = { group = "org.keycloak", name = "keycloak-services", version = { ref = "keycloak" } }
+keycloak-model-jpa = { group = "org.keycloak", name = "keycloak-model-jpa", version = { ref = "keycloak" } }
+hibernate-validator = { group = "org.hibernate.validator", name = "hibernate-validator", version = { ref = "hibernate-validator" } }
+json = { group = "org.json", name = "json", version = { ref = "json" } }
+aws-sts = { group = "software.amazon.awssdk", name = "sts", version = { ref = "aws"} }
+aws-ssm = { group = "software.amazon.awssdk", name = "ssm", version = { ref = "aws"} }
+mockito-core = { group = "org.mockito", name = "mockito-core", version = { ref = "mockito" } }
+mockito-junit-jupiter = { group = "org.mockito", name = "mockito-junit-jupiter", version = { ref = "mockito" } }
+junit = { group = "org.junit.jupiter", name = "junit-jupiter", version = { ref = "junit" } }
+
+
+
